@@ -25,7 +25,7 @@ The question that arises is, if the result1, and the subsequent return values ar
 
 We are left with the task of defining some context to which our arguments to pipe2 will be bound. Who will be the receiver of these method calls? Candidates are:
 
-1. The item itself; this results in 'shitty method chaining' [see part 1]({% post_url 2015-05-30-ruby-pipes-pt1 %})
+1. The item itself; this results in 'shitty method chaining' [see part 1]({{ site.baseurl }}{% post_url 2015-05-30-ruby-pipes-pt1 %})
 2. Allowing the argument to contain the context (a fully qualified function call)
 
 The second item above is what Elixir does, so let's try to do that.
