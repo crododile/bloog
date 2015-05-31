@@ -23,7 +23,7 @@ In Ruby, we'd do something like this
 
 These look similar at first glance, with Ruby being more sentence-like. There is a key difference, however.
 
-The Ruby methods must be defined on the item being returned from each method call in the chain ( i.e. "String" objects ). Elixir is a functional language, so the data being passed ( the string 'Metova' ) along is simply data. It is contains no internal properties other than the string of bytes necessary to spell 'Metova'. It must be passed as an argument to functions defined in the String module. This is worth stating another way. In Ruby method chains, the return value of the previous method is the <em>receiver</em> of the next message in the chain. In Elixir pipes, the return value of the previous function is the <em>argument</em> to the next function in the chain. This is illustrative of a fundamental difference between Functional Programming and Object Oriented Programming.
+The Ruby methods must be defined on the item being returned from each method call in the chain ( i.e. "String" objects ). Elixir is a functional language, so the data being passed ( the string 'Metova' ) along is simply data. It contains no internal properties other than the string of bytes necessary to spell 'Metova'. It must be passed as an argument to functions defined in the String module. This is worth stating another way. In Ruby method chains, the return value of the previous method is the <em>receiver</em> of the next message in the chain. In Elixir pipes, the return value of the previous function is the <em>argument</em> to the next function in the chain. This is illustrative of a fundamental difference between Functional Programming and Object Oriented Programming.
 
 Let's take a closer look 
 
