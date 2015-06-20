@@ -30,4 +30,24 @@ We are left with the task of defining some context to which our arguments to pip
 
 The second item above is what Elixir does, so let's try to do that.
 
-What are the consequences of defining the receiver of a Ruby method outside of a direct method call? The implication is that we will not require access to or mutate the data owned by the receiver, or else we would have invoked the method in the ordinary manner. 
+What are the consequences of defining the receiver of a Ruby method outside of a direct method call? The implication is that we will not require access to or mutate the data owned by the receiver, or else we would have invoked the method in the ordinary manner. We are crossing the bridge into Functional Programming.
+{% highlight ruby %}
+  def pipe2(qualified_function)
+    # the pipe function uses the previous function's return value as first argument
+    first_arg = self
+    class_or_module = qualified_function.split('.')[0] # get class name ( if this was a module you could split on '::')
+    the_class = Object.const_get(class_or_module) 
+    the_method = qualified_function.split('.')[1] # the method itself
+    the_class.send the_method, first_arg
+  end
+  
+  p 1.pipe2("String.try_convert") # "1"
+  
+{% endhighlight %}
+
+String#try_convert is the [only class method on String](http://apidock.com/ruby/String/try_convert/class)
+
+After part 2, I have seen that Functional Programming is like Object Oriented Programming shifted once to the left. Instead of
+
+
+
