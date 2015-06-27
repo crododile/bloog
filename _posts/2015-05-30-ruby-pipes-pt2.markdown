@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Elixir v Ruby Pt. 2"
-date:   2015-05-30 -3:15
+date:   2015-06-1 -3:15
 categories: Elixir Ruby Functional-Programming Object-Oriented-Programming
 ---
  In [part 1]({% post_url 2015-05-30-ruby-pipes-pt1 %}) of this post, we saw that Object Oriented Programming is deeply embedded in the Ruby language. We saw that elixir style pipes and ruby method chaining are largely incompatible solutions to the same problem, and Ruby favors method chaining.
