@@ -6,22 +6,21 @@ categories: Ruby Gems Object-Oriented-Programming
 ---
 In vanilla Rails, if you're being lazy about using decorators or helper methods ( or think that they will actually add complexity instead of remove it ), you can end up with a controller that looks like this
 
-```
-
+~~~ ruby
   def show
     @thing1 = object.thing1
     @thing2 = object.thing2
     @thing3 = anotherObject.thing3
     ...
   end
-```
+~~~
 
 It looks like crap and it means you have a view logic in your controller ( your alternative is the template... ). Your ready for some sort of decorator/bonafide View.
 
 Problem is, you really just want to instantiate all those instance variables! It works just fine!
 
 Solution: Make class does exactly what the controller method does, but at least its in another file
-```
+~~~ ruby
   def show
     @decorator = MyDecorator.new
   end
@@ -37,7 +36,7 @@ Solution: Make class does exactly what the controller method does, but at least 
       ...
     end
   end
-```
+~~~
 
 This looks sort of like an ActiveModel::Serializer file.
 
@@ -48,7 +47,7 @@ Goal: get rid of necessisity of attr_reader call.
 Okay so maybe this isn't a real problem, but I've always enjoyed being able to access properties of javascript objects without thought, so, with a little metaprogramming, I want to make those instance variables accessible without having to make my pathetic little class look like a real class.
 
 Here's the code:
-```
+~~~ ruby
 
 module AllAccess
   module Initializer
@@ -87,7 +86,7 @@ module AllAccess
     klass.send :prepend, Initializer
   end
 end
-```
+~~~
 A couple of interesting things came out of this basically pointless endeavour. Probably the most likeley to be useful was the last few lines, gained from this [StackOverflow Answer](http://stackoverflow.com/a/17498039/3504261) in which we see how to hook into include call of a class that includes your module, as well as to monkeypatch the initialize method. The argument to included is the "includer" and self is the "includee". We tell the "includer" to #prepend the internal Initializer model, which means that the "includer"'s methods get defined first and won't overwrite the "includees" methods. So the module monkey patches the "includer" rather than the more common case of the "includer" monkey patching some method from the module.
 
 Also interesting was the actual creating of the readers and writers. the create_readers method is pretty nice and fairly self explanatory. We get all instance variables from Object#instance_variables, and crate a tuple with the symbol version of the ivar and also the "@#{name}" version.
