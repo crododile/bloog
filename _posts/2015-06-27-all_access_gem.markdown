@@ -6,7 +6,7 @@ categories: Ruby Gems Object-Oriented-Programming
 ---
 In vanilla Rails, if you're being lazy about using decorators or helper methods ( or think that they will actually add complexity instead of remove it ), you can end up with a controller that looks like this
 
-```ruby
+```
   def show
     @thing1 = object.thing1
     @thing2 = object.thing2
@@ -20,7 +20,7 @@ It looks like crap and it means you have a view logic in your controller ( your 
 Problem is, you really just want to instantiate all those instance variables! It works just fine!
 
 Solution: Make class does exactly what the controller method does, but at least its in another file
-```ruby
+```
   def show
     @decorator = MyDecorator.new
   end
@@ -47,7 +47,7 @@ Goal: get rid of necessisity of attr_reader call.
 Okay so maybe this isn't a real problem, but I've always enjoyed being able to access properties of javascript objects without thought, so, with a little metaprogramming, I want to make those instance variables accessible without having to make my pathetic little class look like a real class.
 
 Here's the code:
-```ruby
+```
 
 module AllAccess
   module Initializer
