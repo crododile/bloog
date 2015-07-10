@@ -7,6 +7,7 @@ categories: Ruby Gems Object-Oriented-Programming
 In vanilla Rails, if you're being lazy about using decorators or helper methods ( or think that they will actually add complexity instead of remove it ), you can end up with a controller that looks like this
 
 ```
+
   def show
     @thing1 = object.thing1
     @thing2 = object.thing2
