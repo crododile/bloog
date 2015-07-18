@@ -6,9 +6,9 @@ categories: Ruby Object-Oriented-Programming Books
 ---
 
 poodr by sandy metz
-I got Ruthy, the office administrator at Metova to buty this book for me. I had previously read [rails 4 way] and [eloquent ruby] of the professional ruby series, and been very happy with both.This one had been on my radar for a while, and I was happy  for the opportnitity to get a feee copy.
+I got Ruthy, the office administrator at Metova to busy this book for me. I had previously read [rails 4 way] and [eloquent ruby] of the professional ruby series, and been very happy with both.This one had been on my radar for a while, and I was happy  for the opportunity to get a free copy.
 
-The book definitely belongs in the professional ruby series. It is truly fundamental and very lucid. If you have some professional experience, most of the content will probably be already internalized, but the explanation is extraordinarly clear, and the concepts fundamental. I think this book has a place on nearly every rubyist's reading list. 
+The book definitely belongs in the professional ruby series. It is truly fundamental and very lucid. If you have some professional experience, most of the content will probably be already internalized, but the explanation is extraordinarily clear, and the concepts fundamental. I think this book has a place on nearly every Rubyist's reading list. 
 If you are a junior developer, this is stuff you MUST be introduced to. 
 If you are midlevel, these examples will provide clear explanations and rigorous descriptions of concepts you already have an instinctual understanding of.
 If you are senior, this will provide you with clear examples to explain to your junior developers.
