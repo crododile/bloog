@@ -2,9 +2,7 @@
 title: hola
 email: coburn.d.berry@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
- A programming blog so I can show off how many books
- I've read and maybe get some utility out of pointless 
- Saturday morning code experiments.
+ For when inspiration strikes.
  
 baseurl: "/bloog" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
